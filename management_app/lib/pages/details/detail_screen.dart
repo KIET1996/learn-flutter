@@ -32,6 +32,7 @@ class _DetailsPageState extends State<DetailsPage> {
 
   Future refreshElectric() async {
     setState(() => isLoading = true);
+    print("Cap nhat hoac xoa bill");
     electric = await ElectricDatabase.instance.readElectric(widget.billID);
     setState(() => isLoading = false);
   }
@@ -74,13 +75,14 @@ class _DetailsPageState extends State<DetailsPage> {
       icon: const Icon(Icons.edit_outlined),
       color: kPrimaryColor,
       onPressed: () async {
-        if (isLoading) return;
+          if (isLoading) return;
           await Navigator.of(context).push(
             MaterialPageRoute(
               builder: (context) => EditAddScreen(electric: electric,),
             )
           );
-      }
+          refreshElectric();
+        }
       );
 
   Widget deleteButton() => IconButton(

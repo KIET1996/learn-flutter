@@ -48,6 +48,4 @@ class ListBill extends StatelessWidget {
         )
     );
   }
-
-
 }

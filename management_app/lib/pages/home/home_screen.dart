@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:management_app/constrants.dart';
-
 import '../../size_config.dart';
 import 'components/body.dart';
 
