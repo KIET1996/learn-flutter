@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:bmi_app/screens/home.dart';
 
 void main() {
@@ -18,5 +17,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-
